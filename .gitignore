@@ -1,0 +1,7 @@
+__pycache__/
+.python-version
+bpe-fi.tokenizer.json
+*.npy
+out.txt
+saved_model/
+data/
