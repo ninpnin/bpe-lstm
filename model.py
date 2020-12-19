@@ -9,7 +9,7 @@ def main(load=True):
     VOCAB_SIZE = max(vocab.values()) + 1
     INPUT_LEN = 5
     DIM = 128
-    BATCH_SIZE = 2 ** 10
+    BATCH_SIZE = 2 ** 12
 
     if not load:
         inputs = tf.keras.Input(shape=(None,), name="title")
@@ -41,7 +41,7 @@ def main(load=True):
 
     print(train_x.shape, train_y.shape)
 
-    model.fit(train_x, train_y, epochs=3, batch_size=BATCH_SIZE)
+    model.fit(train_x, train_y, epochs=1, batch_size=BATCH_SIZE)
 
     val_data = np.random.randint(VOCAB_SIZE, size=(1, INPUT_LEN))
 
