@@ -4,3 +4,4 @@ __pycache__/
 out.txt
 saved_model/
 data/
+*~
