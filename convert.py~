@@ -8,8 +8,7 @@ import os
 tokenizer = Tokenizer.from_file("bpe-fi.tokenizer.json")
 
 print(tokenizer)
-#dfolder = "../../Data/wiki/fi/"
-dfolder = "../../Data/finovels/"
+dfolder = "data_wiki/"
 files = os.listdir(dfolder)
 
 print("Read files from", dfolder)
@@ -20,11 +19,9 @@ lines = []
 
 for dpath in files:
     with open(dfolder + dpath) as f:
-        print("File:", dpath)
-
-        for line in f:
-            clean_line = cleanup(line)
-            lines.append(clean_line)
+        current_lines = [cleanup(l) for l in f]
+        for line in current_lines:
+            lines.append(line)
 
 #print("Encode", s[:100], len(s))
 print("ENCODE")
