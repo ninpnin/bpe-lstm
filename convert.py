@@ -8,7 +8,7 @@ import os
 tokenizer = Tokenizer.from_file("bpe-fi.tokenizer.json")
 
 print(tokenizer)
-dfolder = "data/"
+dfolder = "data_wiki/"
 files = os.listdir(dfolder)
 
 print("Read files from", dfolder)
@@ -40,7 +40,6 @@ for encoded in encoded_l:
     for ix in encoded.ids:
         output_is.append(ix)
 
-print(output)
 outf = open("out.txt", "w")
 outf.write(output)
 outf.close()
