@@ -28,4 +28,3 @@ def lstm(vocab_size=None, input_len=4, dim=64, lstm_layers=1, dense_layers=1):
     model.desc = str(input_len) + "_" + str(dim) + "_" + str(lstm_layers) + "_" +  str(dense_layers)
 
     return model
-
